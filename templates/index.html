@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+body {
+background-color: #f2f2f2;
+  background-repeat: repeat;
+  background-position: bottom;
+  margin-right: 200px;
+  background-attachment: fixed;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+.center{
+  margin: auto;
+  width: 80%;
+  border: 3px solid #73AD21;
+  padding: 2px;
+    text-align: center;
+
+  background-color: #ffbf00;
+  box-shadow: 10px 10px;
+
+}
+
+h2 {
+
+text-align: center;
+
+}
+h3{
+text-align: center;
+
+}
+#grad1 {
+align:center;
+width: 70%;
+  height: 80px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<html>
+<title>Emotion Detection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"
+
+<body>
+
+<div class="w3-container w3-teal">
+  <h2><i class="far fa-grin" style="font-size:30px;color:yellow"></i> Text Emotion Classification   <i class="far fa-frown" style="font-size:30px;color:yellow"></i>
+ </h2>
+  
+ 
+</div>
+
+<div>
+  <form action="/get_emotion", method="POST" enctype="multipart/form-data">
+    <label class="w3-text-blue"> <h3> Enter The Text To Predict The Emotion </h3></label>
+    <input type="text" id="fname" name="message" >
+
+    <input type="submit" value="Predict Emotion">
+  </form>
+</div>
+	 
+	<div id="grad1" style="text-align:center;margin:auto;">          
+         
+             <h3 style="color:black;font-size:25px;font-weight:bold;">{{ emotion }} </h3>
+          </div>
+
+</body>
+</html>
+
